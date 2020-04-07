@@ -22,3 +22,5 @@
     dbrf = "!git branch -D $1 || : && git submodule foreach --recursive \"git branch -D $1 || :\"" # force delete local branch recursive
     drbr = "!git push --delete $1 $2 || : && git submodule foreach --recursive \"git push --delete $1 $2 || :\"" # delete remote branch recursive
     stashr = "!git stash || : && git submodule foreach --recursive \"git stash\""
+[push]
+    default = current
